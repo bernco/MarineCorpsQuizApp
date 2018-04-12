@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="marineText">
+        <item name="android:fontFamily">@font/copperplate_gothic_bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+
+    <style name="Select">
+        <item name="android:checked">false</item>
+        <item name="android:buttonTint">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/answer_text_size</item>
+        <item name="android:fontFamily">@font/copperplate_gothic_bold</item>
+    </style>
+
+    <style name="Edit">
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:backgroundTint">@android:color/white</item>
+        <item name="android:fontFamily">@font/copperplate_gothic_bold</item>
+        <item name="android:singleLine">true</item>
+    </style>
+</resources>

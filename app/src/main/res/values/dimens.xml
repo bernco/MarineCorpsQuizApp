@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="regular_dimen">30dp</dimen>
+    <dimen name="question_dimen">18dp</dimen>
+    <dimen name="question_text_size">12sp</dimen>
+    <dimen name="answer_text_size">12sp</dimen>
+
+    <dimen name="button_dimen">24dp</dimen>
+
+</resources>

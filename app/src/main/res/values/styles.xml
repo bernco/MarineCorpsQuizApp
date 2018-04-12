@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Application text style -->
+    <style name="marineText">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- Application checkbox style -->
+    <style name="Select">
+        <item name="android:checked">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/answer_text_size</item>
+    </style>
+
+    <style name="Edit">
+        <item name="android:textCursorDrawable">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="backgroundTint">@android:color/white</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    
+    
+
+</resources>

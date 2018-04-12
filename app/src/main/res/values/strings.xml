@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">MarineCorpsQuizApp</string>
+
+    <string name="welcome">Welcome to the Marine Corps Quiz App!</string>
+    <string name="welcome_1">This app will test you on your knowledge about the Marine Corps.</string>
+    <string name="welcome_2">Good Luck and Semper Fidelis!</string>
+
+    <string name="question_1">Who were the only two Marines to ever receive the Medal of Honor twice?</string>
+    <string name="question_1a">Lewis Puller</string>
+    <string name="question_1b">Smedley Butler</string>
+    <string name="question_1c">Daniel Daly</string>
+    <string name="question_1d">Samuel Nicholas</string>
+
+    <string name="question_2">Where was the birthplace of the Marine Corps?</string>
+    <string name="question_2a">Baltimore, MD</string>
+    <string name="question_2b">Newark, NJ</string>
+    <string name="question_2c">Boston, MA</string>
+    <string name="question_2d">Tun Tavern, PA</string>
+
+    <string name="question_3">What date was the Marine Corps established (aka, its birthday)?</string>
+
+    <string name="question_4">Which of the following islands did the Marines fight the Japanese on in WWII?</string>
+    <string name="question_4a">Tarawa</string>
+    <string name="question_4b">Azores</string>
+    <string name="question_4c">Iwo Jima</string>
+    <string name="question_4d">Solomon Islands</string>
+
+    <string name="question_5">What was the nickname given to General Lewis B. Puller?</string>
+    <string name="question_5a">Chesty</string>
+    <string name="question_5b">Pulls</string>
+    <string name="question_5c">Ace</string>
+    <string name="question_5d">Devil</string>
+
+
+
+</resources>

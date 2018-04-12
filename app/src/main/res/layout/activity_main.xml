@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:src="@drawable/mc_emblem" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/regular_dimen"
+            android:layout_marginRight="@dimen/regular_dimen"
+            android:layout_marginTop="@dimen/regular_dimen"
+            android:text="@string/welcome"
+            android:textAlignment="center"
+            android:theme="@style/marineText"
+            android:textSize="@dimen/question_text_size" />
+
+        <TextView
+            android:id="@+id/welcome_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/regular_dimen"
+            android:layout_marginRight="@dimen/regular_dimen"
+            android:layout_marginTop="@dimen/regular_dimen"
+            android:text="@string/welcome_1"
+            android:textAlignment="center"
+            android:theme="@style/marineText"
+            android:textSize="@dimen/question_text_size" />
+
+        <TextView
+            android:id="@+id/welcome_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/regular_dimen"
+            android:layout_marginRight="@dimen/regular_dimen"
+            android:layout_marginTop="@dimen/regular_dimen"
+            android:text="@string/welcome_2"
+            android:textAlignment="center"
+            android:theme="@style/marineText"
+            android:textSize="@dimen/question_text_size" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bullet"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/button_dimen"
+        android:layout_marginTop="@dimen/button_dimen"
+        android:background="@drawable/next"
+        android:rotation="9"
+        android:onClick="startQuiz"/>
+
+
+</RelativeLayout>
