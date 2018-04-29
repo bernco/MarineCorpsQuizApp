@@ -20,13 +20,13 @@
         <item name="android:textSize">@dimen/answer_text_size</item>
     </style>
 
+    <!-- Application edit text style -->
     <style name="Edit">
         <item name="android:textCursorDrawable">@android:color/white</item>
         <item name="android:textColorHint">@android:color/white</item>
         <item name="backgroundTint">@android:color/white</item>
         <item name="android:singleLine">true</item>
     </style>
-    
-    
+
 
 </resources>

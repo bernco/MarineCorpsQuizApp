@@ -8,6 +8,7 @@
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
+
     <ImageView
         android:id="@+id/question_1_image"
         android:layout_width="wrap_content"
@@ -17,6 +18,7 @@
         android:adjustViewBounds="true"
         android:src="@drawable/smedley_butler" />
 
+    <!-- Question 1 layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,6 +36,7 @@
             android:textSize="@dimen/question_text_size"
             android:theme="@style/marineText" />
 
+        <!-- Multiple answers can be selected by users -->
         <CheckBox
             android:id="@+id/question_1a"
             style="@style/marineText"
@@ -76,6 +79,7 @@
 
     </LinearLayout>
 
+    <!-- Button to go to question 2 -->
     <Button
         android:id="@+id/bullet"
         android:layout_width="150dp"

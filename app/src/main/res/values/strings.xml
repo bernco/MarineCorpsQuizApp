@@ -1,36 +1,67 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">MarineCorpsQuizApp</string>
 
+    <!-- String resources for main activity -->
     <string name="welcome">Welcome to the Marine Corps Quiz App!</string>
     <string name="welcome_1">This app will test you on your knowledge about the Marine Corps.</string>
     <string name="welcome_2">Good Luck and Semper Fidelis!</string>
 
+    <!-- String resources for question 1 -->
     <string name="question_1">Who were the only two Marines to ever receive the Medal of Honor twice?</string>
     <string name="question_1a">Lewis Puller</string>
     <string name="question_1b">Smedley Butler</string>
     <string name="question_1c">Daniel Daly</string>
     <string name="question_1d">Samuel Nicholas</string>
 
+    <!-- String resources for question 2 -->
     <string name="question_2">Where was the birthplace of the Marine Corps?</string>
     <string name="question_2a">Baltimore, MD</string>
     <string name="question_2b">Newark, NJ</string>
     <string name="question_2c">Boston, MA</string>
     <string name="question_2d">Tun Tavern, PA</string>
 
+    <!-- String resources for question 3 -->
     <string name="question_3">What date was the Marine Corps established (aka, its birthday)?</string>
 
+    <!-- String resources for question 4 -->
     <string name="question_4">Which of the following islands did the Marines fight the Japanese on in WWII?</string>
     <string name="question_4a">Tarawa</string>
     <string name="question_4b">Azores</string>
     <string name="question_4c">Iwo Jima</string>
     <string name="question_4d">Solomon Islands</string>
 
+    <!-- String resources for question 5 -->
     <string name="question_5">What was the nickname given to General Lewis B. Puller?</string>
     <string name="question_5a">Chesty</string>
     <string name="question_5b">Pulls</string>
     <string name="question_5c">Ace</string>
     <string name="question_5d">Devil</string>
 
+    <!-- String resources for correct and incorrect answers to be used in email -->
+    <string name="correct_answer_1">Correct, Smedley Butler and Daniel Daly were the only two Marines to ever receive the Medal of Honor.</string>
+    <string name="correct_answer_2">Correct, Tun Tavern was the birthplace of the Marine Corps.</string>
+    <string name="correct_answer_3">Correct, 11/10/1775 was the birthdate of the Marine Corps.</string>
+    <string name="correct_answer_4">Correct, the Marines fought the Japanese on the islands of Tarawa, Iwo Jima, and the Solomon Islands during WWII.</string>
+    <string name="correct_answer_5">Correct, the nickname for General Lewis B. Puller was Chesty.</string>
+    <string name="incorrect_answer">Incorrect, you need to study more.</string>
 
+    <!-- String resources for email format -->
+    <string name="quiz_results_email_subject">Marine Corps Quiz results for <xliff:g example="Jeff" id="name">%s</xliff:g></string>
+    <string name="quiz_results_name">Name: <xliff:g example="Jeff" id="name">%s</xliff:g></string>
+    <string name="quiz_results_question_1">Question 1 correct? <xliff:g example="Correct" id="question_1">%s</xliff:g></string>
+    <string name="quiz_results_question_2">Question 2 correct? <xliff:g example="Correct" id="question_2">%s</xliff:g></string>
+    <string name="quiz_results_question_3">Question 3 correct? <xliff:g example="Correct" id="question_3">%s</xliff:g></string>
+    <string name="quiz_results_question_4">Question 4 correct? <xliff:g example="Correct" id="question_4">%s</xliff:g></string>
+    <string name="quiz_results_question_5">Question 5 correct? <xliff:g example="Correct" id="question_5">%s</xliff:g></string>
+
+    <!-- String resources for quiz results -->
+    <string name="killed_response_1">, you must be out of your @#$%^\*() mind! \n\n You didn\'t answer a single "(*\^%$#@ question correctly! \n\n You don't even rate a picture! \n\n You better try again and at least learn something! \n\n You have \u0020</string>
+    <string name="killed_response_2">\u0020 bullets to kill the enemy! You\'ve been killed!</string>
+    <string name="civ_response">, you must be a civilian! \n\n Total Bullets Received: \u0020</string>
+    <string name="usaf_response">, you must be in the Air Force! \n\n Total Bullets Received: \u0020</string>
+    <string name="usa_response">, you must be in the Army! \n\n Total Bullets Received: \u0020</string>
+    <string name="usn_response">, you must be in the Navy! \n\n Total Bullets Received: \u0020</string>
+    <string name="usmc_response">, you must be in the Marine Corps! \n\n Oohrah and Semper Fidelis! \n\n Total Bullets Received: \u0020</string>
+    <string name="error_response">, something went wrong!</string>
 
 </resources>

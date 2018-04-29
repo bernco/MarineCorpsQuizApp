@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/quiz_results_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/black"
@@ -16,7 +17,9 @@
         android:layout_gravity="center_horizontal"
         android:adjustViewBounds="true" />
 
+    <!-- Quiz results layout -->
     <LinearLayout
+        android:id="@+id/quiz_results_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/quiz_results_image"
@@ -29,12 +32,40 @@
             android:layout_marginLeft="@dimen/regular_dimen"
             android:layout_marginRight="@dimen/regular_dimen"
             android:layout_marginTop="@dimen/regular_dimen"
-            android:text=""
             android:gravity="center"
             android:textAlignment="center"
             android:textSize="@dimen/question_text_size"
             android:theme="@style/marineText" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/quiz_results_layout"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <!-- Button to send quiz results via email application -->
+        <Button
+            android:id="@+id/bullet_email"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/results_btn_dimen"
+            android:background="@drawable/send"
+            android:onClick="sendResults"
+            android:rotation="9" />
+
+        <!-- Button to restart quiz and go to main activity -->
+        <Button
+            android:id="@+id/bullet_restart"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/results_btn_dimen"
+            android:background="@drawable/restart"
+            android:onClick="restart"
+            android:rotation="9" />
     </LinearLayout>
 
 </RelativeLayout>

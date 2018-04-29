@@ -17,6 +17,7 @@
         android:adjustViewBounds="true"
         android:src="@drawable/chesty_puller" />
 
+    <!-- Question 5 layout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,6 +35,7 @@
             android:textSize="@dimen/question_text_size"
             android:theme="@style/marineText" />
 
+        <!-- Users can only select 1 answer -->
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -83,6 +85,7 @@
 
     </LinearLayout>
 
+    <!-- Button to go to quiz results -->
     <Button
         android:id="@+id/bullet"
         android:layout_width="150dp"

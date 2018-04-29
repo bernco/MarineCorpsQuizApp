@@ -6,5 +6,6 @@
     <dimen name="answer_text_size">12sp</dimen>
 
     <dimen name="button_dimen">24dp</dimen>
+    <dimen name="results_btn_dimen">12dp</dimen>
 
 </resources>
