@@ -21,6 +21,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     //declare variables
     private int score;
     private int question1, question2, question3, question4, question5, quizResults;
-    private RelativeLayout quizResultsLayout;
+    private ScrollView quizResultsLayout;
     private CheckBox question1Answer1, question1Answer2, question4Answer1, question4Answer2, question4Answer3;
     private CheckBox question1Wrong1, question1Wrong2, question4Wrong1;
     private RadioButton question2Answer, question5Answer;
@@ -46,9 +47,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(main);
-
-        //set orientation to portrait
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         //call name view
         name = findViewById(R.id.name);
@@ -65,13 +63,16 @@ public class MainActivity extends AppCompatActivity {
         question4 = R.layout.question_4;
         question5 = R.layout.question_5;
         quizResults = R.layout.quiz_results;
+
     }
 
     // method for the main activity page and entering into the quiz
     public void startQuiz(View view) {
         enterName = name.getText().toString();
+        // checks if text was entered in the name field
         if (enterName.equals(null) || enterName.equals("")) {
             Toast.makeText(this, "You didn't enter your name! Try again!", Toast.LENGTH_SHORT).show();
+            // if text was entered in the name field, go to question 1
         } else {
             resultsMessage += "Name: " + enterName + "\n\n";
             setContentView(question1);
@@ -91,9 +92,11 @@ public class MainActivity extends AppCompatActivity {
         boolean selectQuestion1Answer2 = question1Answer2.isChecked();
         boolean selectQuestion1Wrong2 = question1Wrong2.isChecked();
 
+        // checks if any checkboxes are selected
         if (!selectQuestion1Wrong1 && !selectQuestion1Answer1 && !selectQuestion1Answer2 && !selectQuestion1Wrong2) {
             Toast.makeText(this, "You didn't make a selection! Try again!", Toast.LENGTH_SHORT).show();
-        } else if (selectQuestion1Answer1 && selectQuestion1Answer2) {
+            // if correct answers are selected add points to score and go to question 2
+        } else if (selectQuestion1Answer1 && selectQuestion1Answer2 && !selectQuestion1Wrong1 && !selectQuestion1Wrong2) {
             score += 25;
             resultsMessage += getString(R.string.quiz_results_question_1, getString(R.string.correct_answer_1) + "\n\n");
             Toast.makeText(this, "You received 25 bullets. Total bullets received so far: " +
@@ -101,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
             setContentView(question2);
             mediaPlayer.start();
             return;
+            // if incorrect answers are selected do not add points and go to question 2
         } else {
             resultsMessage += getString(R.string.quiz_results_question_1, getString(R.string.incorrect_answer) + "\n\n");
             Toast.makeText(this, "You received 0 bullets. Total bullets received so far: " +
@@ -123,8 +127,10 @@ public class MainActivity extends AppCompatActivity {
         boolean selectQuestion2Wrong3 = question2Wrong3.isChecked();
         boolean selectQuestion2Answer = question2Answer.isChecked();
 
+        // checks if a radio box is selected
         if (!selectQuestion2Wrong1 && !selectQuestion2Wrong2 && !selectQuestion2Wrong3 && !selectQuestion2Answer) {
             Toast.makeText(this, "You didn't make a selection! Try again!", Toast.LENGTH_SHORT).show();
+            // if correct answer is selected add points to score and go to question 3
         } else if (selectQuestion2Answer) {
             score += 15;
             resultsMessage += getString(R.string.quiz_results_question_2, getString(R.string.correct_answer_2) + "\n\n");
@@ -133,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
             setContentView(question3);
             mediaPlayer.start();
             return;
+            // if incorrect answer is selected do not add points and go to question 3
         } else {
             resultsMessage += getString(R.string.quiz_results_question_2, getString(R.string.incorrect_answer) + "\n\n");
             Toast.makeText(this, "You received 0 bullets. Total bullets received so far: " +
@@ -149,8 +156,10 @@ public class MainActivity extends AppCompatActivity {
 
         String enterQuestion3Answer = question3Answer.getText().toString();
 
+        // checks if text was entered in the question 3 field
         if (enterQuestion3Answer.equals(null) || enterQuestion3Answer.equals("")) {
             Toast.makeText(this, "You didn't enter any text! Try again!", Toast.LENGTH_SHORT).show();
+            // if text was entered and it was the correct answer, then add points to score and go to question 4
         } else if (enterQuestion3Answer.equals("11/10/1775")) {
             score += 15;
             resultsMessage += getString(R.string.quiz_results_question_3, getString(R.string.correct_answer_3) + "\n\n");
@@ -159,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
             setContentView(question4);
             mediaPlayer.start();
             return;
+            // if text was entered and it was the incorrect answer, then do not add points to score and go to question 4
         } else {
             resultsMessage += getString(R.string.quiz_results_question_3, getString(R.string.incorrect_answer) + "\n\n");
             Toast.makeText(this, "You received 0 bullets. Total bullets received so far: " +
@@ -181,9 +191,11 @@ public class MainActivity extends AppCompatActivity {
         boolean selectQuestion4Answer2 = question4Answer2.isChecked();
         boolean selectQuestion4Answer3 = question4Answer3.isChecked();
 
+        // checks if any checkboxes are selected
         if (!selectQuestion4Answer1 && !selectQuestion4Wrong1 && !selectQuestion4Answer2 && !selectQuestion4Answer3) {
             Toast.makeText(this, "You didn't make a selection! Try again!", Toast.LENGTH_SHORT).show();
-        } else if (selectQuestion4Answer1 && selectQuestion4Answer2 && selectQuestion4Answer3) {
+            // if correct answers are selected add points to score and go to question 5
+        } else if (selectQuestion4Answer1 && selectQuestion4Answer2 && selectQuestion4Answer3 && !selectQuestion4Wrong1) {
             score += 30;
             resultsMessage += getString(R.string.quiz_results_question_4, getString(R.string.correct_answer_4) + "\n\n");
             Toast.makeText(this, "You received 30 bullets. Total bullets received so far: " +
@@ -191,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
             setContentView(question5);
             mediaPlayer.start();
             return;
+            // if incorrect answers are selected do not add points and go to question 5
         } else {
             resultsMessage += getString(R.string.quiz_results_question_4, getString(R.string.incorrect_answer) + "\n\n");
             Toast.makeText(this, "You received 0 bullets. Total bullets received so far: " +
@@ -214,8 +227,10 @@ public class MainActivity extends AppCompatActivity {
         boolean selectQuestion5Wrong2 = question5Wrong2.isChecked();
         boolean selectQuestion5Wrong3 = question5Wrong3.isChecked();
 
+        // checks if a radio box is selected
         if (!selectQuestion5Answer && !selectQuestion5Wrong1 && !selectQuestion5Wrong2 && !selectQuestion5Wrong3) {
             Toast.makeText(this, "You didn't make a selection! Try again!", Toast.LENGTH_SHORT).show();
+            // if correct answer is selected add points to score and go to quiz results
         } else if (selectQuestion5Answer) {
             score += 15;
             resultsMessage += getString(R.string.quiz_results_question_5, getString(R.string.correct_answer_5) + "\n\n");
@@ -224,7 +239,7 @@ public class MainActivity extends AppCompatActivity {
             setContentView(quizResults);
             viewResults(score);
             return;
-
+            // if incorrect answer is selected do not add points and go to quiz results
         } else {
             resultsMessage += getString(R.string.quiz_results_question_5, getString(R.string.incorrect_answer) + "\n\n");
             Toast.makeText(this, "You received 0 bullets. Total bullets received so far: " +
@@ -250,6 +265,7 @@ public class MainActivity extends AppCompatActivity {
         Drawable usn = getResources().getDrawable(R.drawable.usn);
         Drawable usmc = getResources().getDrawable(R.drawable.usmc);
 
+        // the results page will change depending on the total score
         if (totalScore == 0) {
             quizResults.setText(enterName + getString(R.string.killed_response_1) + score + getString(R.string.killed_response_2));
             quizResultsLayout.setBackgroundColor(Color.RED);
